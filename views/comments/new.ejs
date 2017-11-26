@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="row">
-        <h1 style="text-align: center;">Create a new campground</h1>
+        <h1 style="text-align: center;">Add Comment for <%= campground.name %></h1>
         <div style="margin: 25px auto;width: 30%">
             <form action="/campgrounds/<%= campground._id %>/comments" method="POST">
                 <label for="commenttext">Comment</label>
@@ -11,7 +11,7 @@
                 </div>
                 <label for="commentauthor">Author</label>
                 <div class="form-group">
-                    <input class="form-control" id="commentauthor" type="text" name="comment[author]">
+                    <input value="<%= currentUser.username %>" class="form-control" id="commentauthor" type="text" name="comment[author]">
                 </div>
                 <div class="form-group">
                     <button class="btn btn-block btn-primary btn-lg">Add</button>
